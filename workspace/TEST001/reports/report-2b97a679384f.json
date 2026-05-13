@@ -1,0 +1,13 @@
+{
+  "report_bundle_id": "report-2b97a679384f",
+  "project_id": "TEST001",
+  "case_id": "002_WeberCritical_GridModification",
+  "plan_id": "plan-bb758090e30a",
+  "run_id": "run-e1ecd2cbac3f",
+  "summary": "Executed approved plan for case '002_WeberCritical_GridModification' with instruction: Inlet Droplet Dia. 1000 , 500 , 100 μm",
+  "metrics": {
+    "parameter_axis_count": 1,
+    "case_revision": 7
+  },
+  "created_at": "2026-05-10T07:17:32.673120Z"
+}

@@ -1,0 +1,16 @@
+{
+  "report_bundle_id": "report-3393a7fd0de6",
+  "project_id": "TEST001",
+  "case_id": "002_WeberCritical_GridModification",
+  "plan_id": "plan-e6ef6c8961c1",
+  "run_id": "run-2c23a11c83c8",
+  "summary": "Executed approved plan for case '002_WeberCritical_GridModification' with instruction: そのまま実行して",
+  "metrics": {
+    "parameter_axis_count": 0,
+    "case_revision": 7,
+    "run_count": 7,
+    "thread_id": "thread-82840412a637",
+    "analysis_method_count": 0
+  },
+  "created_at": "2026-05-10T13:36:01.815607Z"
+}

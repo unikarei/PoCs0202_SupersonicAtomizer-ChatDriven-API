@@ -1,0 +1,16 @@
+{
+  "plan_id": "plan-ff18496d2034",
+  "project_id": "TEST001",
+  "case_id": "002_WeberCritical_GridModification",
+  "instruction": "Sweep　Inlet doloplet dia. 500 , 100 , 50μm",
+  "parameter_axes": {},
+  "postprocess_policy": {},
+  "assumptions": [
+    "Plan execution requires explicit user approval.",
+    "Server default post-processing runs for every execution.",
+    "No parameter axes specified; execution is treated as a single-run request in this PoC."
+  ],
+  "approval_state": "pending",
+  "created_at": "2026-05-10T06:50:28.045723Z",
+  "approved_at": null
+}

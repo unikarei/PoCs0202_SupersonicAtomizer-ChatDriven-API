@@ -1,0 +1,19 @@
+{
+  "thread_id": "thread-843610ee06b2",
+  "project_id": "TEST001",
+  "case_id": "002_WeberCritical_GridModification",
+  "messages": [
+    {
+      "role": "user",
+      "content": "設定されているJSONファイルのまま、実行して",
+      "created_at": "2026-05-10T12:33:31.360694Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Created plan plan-294154c0710e with 1 planned run(s).",
+      "created_at": "2026-05-10T12:33:31.443362Z"
+    }
+  ],
+  "created_at": "2026-05-10T12:33:31.360694Z",
+  "updated_at": "2026-05-10T12:33:31.443362Z"
+}

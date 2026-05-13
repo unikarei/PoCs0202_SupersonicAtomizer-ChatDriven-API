@@ -1,0 +1,37 @@
+# Python cache and build artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual environments
+.venv/
+venv/
+.env/
+
+# uv lock file is committed; cache is not
+.uv/
+
+# Test and tool caches
+.coverage
+htmlcov/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code / local editor settings
+.vscode/
+
+# Runtime outputs
+outputs/
+
+# OS / Office temporary files
+~$*
+Thumbs.db
+.DS_Store
+.env
+".env" 

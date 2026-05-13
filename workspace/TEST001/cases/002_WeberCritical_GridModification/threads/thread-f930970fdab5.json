@@ -1,0 +1,19 @@
+{
+  "thread_id": "thread-f930970fdab5",
+  "project_id": "TEST001",
+  "case_id": "002_WeberCritical_GridModification",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Inlet droplet dia. 1000 , 500 , 100 μm",
+      "created_at": "2026-05-10T12:22:50.817755Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Created plan plan-362ca15f61c4 with 3 planned run(s).",
+      "created_at": "2026-05-10T12:22:50.927820Z"
+    }
+  ],
+  "created_at": "2026-05-10T12:22:50.817755Z",
+  "updated_at": "2026-05-10T12:22:50.927820Z"
+}

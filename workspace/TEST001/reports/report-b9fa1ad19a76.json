@@ -1,0 +1,16 @@
+{
+  "report_bundle_id": "report-b9fa1ad19a76",
+  "project_id": "TEST001",
+  "case_id": "001_WeberCritical_ForAgents",
+  "plan_id": "plan-205aaf294d2f",
+  "run_id": "run-9d8aa4ab2d11",
+  "summary": "Executed approved plan for case '001_WeberCritical_ForAgents' with instruction: In drop dia  1000 , 500 , 100 μm",
+  "metrics": {
+    "parameter_axis_count": 1,
+    "case_revision": 4,
+    "run_count": 3,
+    "thread_id": "thread-81819aa2ce9d",
+    "analysis_method_count": 0
+  },
+  "created_at": "2026-05-10T11:48:26.290580Z"
+}

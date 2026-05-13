@@ -1,0 +1,13 @@
+{
+  "report_bundle_id": "report-d59880394134",
+  "project_id": "TEST001",
+  "case_id": "001_WeberCritical_ForAgents",
+  "plan_id": "plan-a5a680303fb6",
+  "run_id": "run-73fc5c2eef3b",
+  "summary": "Executed approved plan for case '001_WeberCritical_ForAgents' with instruction: Droplet in dia. 1000 , 500 , 100μm",
+  "metrics": {
+    "parameter_axis_count": 1,
+    "case_revision": 3
+  },
+  "created_at": "2026-05-10T07:43:29.880608Z"
+}

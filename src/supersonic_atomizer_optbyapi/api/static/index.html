@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Supersonic Atomizer OptByAPI</title>
+  <link rel="stylesheet" href="/static/app.css" />
+  <script src="https://cdn.plot.ly/plotly-2.26.0.min.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="explorer">
+      <div class="brand-block">
+        <div class="eyebrow">Supersonic Atomizer</div>
+        <h1>Project Explorer</h1>
+        <p>Project = working directory. Select a case to load Conditions and Grid.</p>
+      </div>
+
+      <div class="panel-card">
+        <label>New Project</label>
+        <div class="row">
+          <input id="project-name-input" type="text" placeholder="demo-project" />
+          <button id="create-project-btn">Create</button>
+        </div>
+        <label class="sub-label">External Solver Server</label>
+        <div class="row">
+          <select id="solver-endpoint-select">
+            <option value="">(internal mock)</option>
+            <option value="http://127.0.0.1:3000/">http://127.0.0.1:3000/</option>
+            <option value="http://127.0.0.1:8502/">http://127.0.0.1:8502/</option>
+          </select>
+        </div>
+        <label class="sub-label">Manual IP:Port (optional)</label>
+        <div class="row">
+          <input id="solver-endpoint-input" type="text" placeholder="127.0.0.1:3000 or http://127.0.0.1:3000/" />
+          <button id="save-solver-endpoint-btn" type="button">Save</button>
+        </div>
+      </div>
+
+      <div class="panel-card">
+        <label>Import Case YAML</label>
+        <label class="sub-label">Select file</label>
+        <input id="source-yaml-file" type="file" accept=".yaml,.yml" />
+        <button id="import-case-btn">Import</button>
+      </div>
+
+      <div class="tree-card">
+        <div class="section-title">Projects / Cases</div>
+        <div id="project-tree" class="tree"></div>
+      </div>
+    </aside>
+
+    <main class="workspace">
+      <nav class="tabs" role="tablist" aria-label="Main tabs">
+        <button class="tab-btn active" data-tab="conditions">Conditions</button>
+        <button class="tab-btn" data-tab="grid">Grid</button>
+        <button class="tab-btn" data-tab="solve">Solve</button>
+        <button class="tab-btn" data-tab="graphs">Graphs</button>
+        <button class="tab-btn" data-tab="table">Table</button>
+        <button class="tab-btn" data-tab="report">Report</button>
+      </nav>
+
+      <section class="tab-panel active" id="tab-conditions">
+        <div class="section-title">Selected Case</div>
+        <div id="active-case-label" class="active-case">No case selected</div>
+        <label>Conditions JSON</label>
+        <textarea id="conditions-json" spellcheck="false"></textarea>
+        <div class="actions">
+          <button id="save-conditions-btn">Save Conditions / Grid</button>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="tab-grid">
+        <div class="section-title">Grid</div>
+        <label>Grid JSON</label>
+        <textarea id="grid-json" spellcheck="false"></textarea>
+        <div class="actions">
+          <button id="save-grid-btn">Save Conditions / Grid</button>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="tab-solve">
+        <div class="section-title">Solve</div>
+        <p class="hint">This shell dispatches approved plans and shows queued/running/completed state.</p>
+        <div id="run-status" class="status">No run yet.</div>
+
+        <div id="plan-preview" class="plan-preview hidden">
+          <div class="plan-preview-header">
+            <span class="plan-preview-title">Plan Preview</span>
+            <span id="plan-approval-badge" class="badge badge-pending">PENDING APPROVAL</span>
+          </div>
+          <div class="plan-preview-body">
+            <div class="preview-section">
+              <div class="preview-label">Instruction</div>
+              <div id="preview-instruction" class="preview-instruction-text"></div>
+            </div>
+            <div class="preview-section">
+              <div class="preview-label">Parameter Axes &amp; Run Matrix</div>
+              <div id="preview-run-count" class="preview-run-count"></div>
+              <table id="preview-axes-table" class="axes-table">
+                <thead>
+                  <tr><th>Parameter</th><th>Values</th><th>Count</th></tr>
+                </thead>
+                <tbody id="preview-axes-body"></tbody>
+              </table>
+            </div>
+            <div class="preview-section">
+              <div class="preview-label">Assumptions</div>
+              <ul id="preview-assumptions" class="assumptions-list"></ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="tab-graphs">
+        <div class="section-title">Graphs</div>
+        <div class="graphs-toolbar">
+          <label class="compact-field compact-check">
+            <span>Compare Mode</span>
+            <input id="graphs-compare-mode" type="checkbox" />
+          </label>
+          <label class="compact-field">Compare View
+            <select id="graphs-compare-view" disabled>
+              <option value="overlay">Overlay selected data</option>
+              <option value="separate">Separate graph groups</option>
+            </select>
+          </label>
+          <div class="report-pager">
+            <button id="graphs-select-visible-btn" type="button" disabled>Select visible reports</button>
+            <button id="graphs-clear-selection-btn" type="button" disabled>Clear selection</button>
+          </div>
+        </div>
+        <div id="graphs-mode-note" class="results-note">Default mode: latest report in selected case.</div>
+        <div id="graphs-view" class="graphs-grid-container"></div>
+      </section>
+
+      <section class="tab-panel" id="tab-table">
+        <div class="section-title">Table</div>
+        <div id="table-view" class="placeholder">Result rows will appear here.</div>
+      </section>
+
+      <section class="tab-panel" id="tab-report">
+        <div class="section-title">Report</div>
+        <div class="report-toolbar">
+          <label class="compact-field">Sort
+            <select id="report-sort-by">
+              <option value="created_at">Created</option>
+              <option value="case_id">Case</option>
+              <option value="plan_id">Plan</option>
+              <option value="run_id">Run</option>
+            </select>
+          </label>
+          <label class="compact-field">Order
+            <select id="report-sort-order">
+              <option value="desc">Newest First</option>
+              <option value="asc">Oldest First</option>
+            </select>
+          </label>
+          <div class="report-pager">
+            <button id="report-prev-page" type="button">Prev</button>
+            <span id="report-page-label">Page 1</span>
+            <button id="report-next-page" type="button">Next</button>
+          </div>
+        </div>
+        <div id="report-list" class="report-list"></div>
+      </section>
+    </main>
+
+    <div id="workspace-chat-resizer" class="pane-resizer" role="separator" aria-orientation="vertical" aria-label="Resize right chat pane"></div>
+
+    <aside class="chat">
+      <div class="brand-block compact">
+        <div class="eyebrow">Case Chat</div>
+        <h2>Right-side Chat</h2>
+        <p>Turn instructions into plans, approve them, then run.</p>
+      </div>
+
+      <div class="panel-card chat-card">
+        <label>Instruction</label>
+        <textarea id="chat-instruction" rows="5" placeholder="Sweep inlet droplet diameter 1000um, 500um, 50um. Exit pressure is same as initial case."></textarea>
+        <label>Parameter Axes (optional JSON or hint)</label>
+        <textarea id="parameter-axes" rows="3" placeholder='Optional: {"Pt_in": [250000, 300000]} or "Pt_in 250000, 300000"'></textarea>
+        <label>Post-process Additional (optional)</label>
+        <textarea id="postprocess-policy" rows="3" placeholder='Optional additional requests only, e.g. "plot mach number, max droplet dia"'></textarea>
+        <div class="actions stacked">
+          <button id="create-plan-btn">Create Plan</button>
+          <button id="approve-plan-btn">Approve Latest Plan</button>
+          <button id="run-plan-btn">Run Approved Plan</button>
+        </div>
+      </div>
+
+      <div class="panel-card">
+        <div class="section-title">Chat Log</div>
+        <div id="chat-log" class="chat-log"></div>
+      </div>
+    </aside>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

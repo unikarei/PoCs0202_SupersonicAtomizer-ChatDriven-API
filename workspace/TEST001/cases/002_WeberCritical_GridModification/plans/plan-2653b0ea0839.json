@@ -1,0 +1,22 @@
+{
+  "plan_id": "plan-2653b0ea0839",
+  "project_id": "TEST001",
+  "case_id": "002_WeberCritical_GridModification",
+  "instruction": "Sweep inlet dia. 1000 , 500 , 100 μm",
+  "parameter_axes": {
+    "droplet_diameter_um": [
+      1000.0,
+      500.0,
+      100.0
+    ]
+  },
+  "postprocess_policy": {},
+  "assumptions": [
+    "Plan execution requires explicit user approval.",
+    "Server default post-processing runs for every execution.",
+    "Parameter study expands one run per specified axis combination in later phases."
+  ],
+  "approval_state": "approved",
+  "created_at": "2026-05-10T07:02:48.489787Z",
+  "approved_at": "2026-05-10T07:03:16.332755Z"
+}

@@ -1,0 +1,69 @@
+{
+  "run_id": "run-bf3a51797700",
+  "project_id": "TEST001",
+  "case_id": "002_WeberCritical_GridModification",
+  "plan_id": "plan-215de0781d43",
+  "status": "completed",
+  "diagnostics": {
+    "case_revision": 7,
+    "parameter_axis_count": 1,
+    "instruction": "そのまま解析して",
+    "thread_id": "thread-a5124d834838",
+    "run_count": 7,
+    "run_matrix": [
+      {
+        "Ps_out": 264547.5
+      },
+      {
+        "Ps_out": 226105.55
+      },
+      {
+        "Ps_out": 207259.55
+      },
+      {
+        "Ps_out": 191105.85
+      },
+      {
+        "Ps_out": 49704.25
+      },
+      {
+        "Ps_out": 33136.15
+      },
+      {
+        "Ps_out": 25000.0
+      }
+    ],
+    "completed_runs": 7,
+    "analysis_methods": [],
+    "effective_parameter_axes": {
+      "Ps_out": [
+        264547.5,
+        226105.55,
+        207259.55,
+        191105.85,
+        49704.25,
+        33136.15,
+        25000.0
+      ]
+    },
+    "sweep_source": "conditions.boundary_conditions.Ps_out",
+    "solver_mode": "external_api",
+    "solver_base_url": "http://127.0.0.1:8502/",
+    "active_combination": null,
+    "progress_fraction": 1.0,
+    "results_csv_paths": [
+      {
+        "label": "external_result",
+        "results_csv_path": "D:\\usr8_work\\work_23_chatgpt\\16_PoCs\\0202_SupersonicAtomizer_OptByAPI\\workspace\\TEST001\\cases\\002_WeberCritical_GridModification\\runs\\run-bf3a51797700.external_results.csv"
+      }
+    ],
+    "external_project_name": "003_AgentTest",
+    "external_last_response": {
+      "status": "completed",
+      "job_id": "ef2c3e3d-af3a-40b0-b2bd-9f2886c30c7f"
+    },
+    "results_csv_path": "D:\\usr8_work\\work_23_chatgpt\\16_PoCs\\0202_SupersonicAtomizer_OptByAPI\\workspace\\TEST001\\cases\\002_WeberCritical_GridModification\\runs\\run-bf3a51797700.external_results.csv"
+  },
+  "created_at": "2026-05-10T14:00:17.795023Z",
+  "completed_at": "2026-05-10T14:00:38.631848Z"
+}

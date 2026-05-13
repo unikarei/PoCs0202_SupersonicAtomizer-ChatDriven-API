@@ -1,0 +1,25 @@
+{
+  "run_id": "run-bed2390f3511",
+  "project_id": "TEST001",
+  "case_id": "002_WeberCritical_GridModification",
+  "plan_id": "plan-294154c0710e",
+  "status": "completed",
+  "diagnostics": {
+    "case_revision": 7,
+    "parameter_axis_count": 0,
+    "instruction": "設定されているJSONファイルのまま、実行して",
+    "thread_id": "thread-843610ee06b2",
+    "run_count": 1,
+    "run_matrix": [
+      {
+        "case": "baseline"
+      }
+    ],
+    "completed_runs": 1,
+    "analysis_methods": [],
+    "active_combination": null,
+    "progress_fraction": 1.0
+  },
+  "created_at": "2026-05-10T12:33:41.203361Z",
+  "completed_at": "2026-05-10T12:33:41.501940Z"
+}

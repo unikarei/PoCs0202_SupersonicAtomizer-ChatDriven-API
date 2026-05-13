@@ -1,0 +1,55 @@
+{
+  "run_id": "run-2c23a11c83c8",
+  "project_id": "TEST001",
+  "case_id": "002_WeberCritical_GridModification",
+  "plan_id": "plan-e6ef6c8961c1",
+  "status": "completed",
+  "diagnostics": {
+    "case_revision": 7,
+    "parameter_axis_count": 1,
+    "instruction": "そのまま実行して",
+    "thread_id": "thread-82840412a637",
+    "run_count": 7,
+    "run_matrix": [
+      {
+        "Ps_out": 264547.5
+      },
+      {
+        "Ps_out": 226105.55
+      },
+      {
+        "Ps_out": 207259.55
+      },
+      {
+        "Ps_out": 191105.85
+      },
+      {
+        "Ps_out": 49704.25
+      },
+      {
+        "Ps_out": 33136.15
+      },
+      {
+        "Ps_out": 25000.0
+      }
+    ],
+    "completed_runs": 7,
+    "analysis_methods": [],
+    "effective_parameter_axes": {
+      "Ps_out": [
+        264547.5,
+        226105.55,
+        207259.55,
+        191105.85,
+        49704.25,
+        33136.15,
+        25000.0
+      ]
+    },
+    "sweep_source": "conditions.boundary_conditions.Ps_out",
+    "active_combination": null,
+    "progress_fraction": 1.0
+  },
+  "created_at": "2026-05-10T13:36:01.100899Z",
+  "completed_at": "2026-05-10T13:36:01.787843Z"
+}

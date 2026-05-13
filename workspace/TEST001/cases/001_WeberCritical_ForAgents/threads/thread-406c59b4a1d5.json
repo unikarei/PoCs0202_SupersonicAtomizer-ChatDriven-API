@@ -1,0 +1,19 @@
+{
+  "thread_id": "thread-406c59b4a1d5",
+  "project_id": "TEST001",
+  "case_id": "001_WeberCritical_ForAgents",
+  "messages": [
+    {
+      "role": "user",
+      "content": "実行して",
+      "created_at": "2026-05-11T12:28:36.468621Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Created plan plan-42796353b165 with 1 planned run(s).",
+      "created_at": "2026-05-11T12:28:36.519962Z"
+    }
+  ],
+  "created_at": "2026-05-11T12:28:36.468621Z",
+  "updated_at": "2026-05-11T12:28:36.519962Z"
+}

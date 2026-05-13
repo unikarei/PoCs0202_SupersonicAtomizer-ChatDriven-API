@@ -1,0 +1,31 @@
+{
+  "run_id": "run-a4d669c44fbe",
+  "project_id": "TEST001",
+  "case_id": "002_WeberCritical_GridModification",
+  "plan_id": "plan-362ca15f61c4",
+  "status": "completed",
+  "diagnostics": {
+    "case_revision": 7,
+    "parameter_axis_count": 1,
+    "instruction": "Inlet droplet dia. 1000 , 500 , 100 μm",
+    "thread_id": "thread-f930970fdab5",
+    "run_count": 3,
+    "run_matrix": [
+      {
+        "droplet_diameter_um": 1000.0
+      },
+      {
+        "droplet_diameter_um": 500.0
+      },
+      {
+        "droplet_diameter_um": 100.0
+      }
+    ],
+    "completed_runs": 3,
+    "analysis_methods": [],
+    "active_combination": null,
+    "progress_fraction": 1.0
+  },
+  "created_at": "2026-05-10T12:22:57.991184Z",
+  "completed_at": "2026-05-10T12:22:58.453657Z"
+}

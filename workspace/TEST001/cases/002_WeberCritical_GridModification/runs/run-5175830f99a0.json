@@ -1,0 +1,57 @@
+{
+  "run_id": "run-5175830f99a0",
+  "project_id": "TEST001",
+  "case_id": "002_WeberCritical_GridModification",
+  "plan_id": "plan-e6ef6c8961c1",
+  "status": "failed",
+  "diagnostics": {
+    "case_revision": 7,
+    "parameter_axis_count": 1,
+    "instruction": "そのまま実行して",
+    "thread_id": "thread-82840412a637",
+    "run_count": 7,
+    "run_matrix": [
+      {
+        "Ps_out": 264547.5
+      },
+      {
+        "Ps_out": 226105.55
+      },
+      {
+        "Ps_out": 207259.55
+      },
+      {
+        "Ps_out": 191105.85
+      },
+      {
+        "Ps_out": 49704.25
+      },
+      {
+        "Ps_out": 33136.15
+      },
+      {
+        "Ps_out": 25000.0
+      }
+    ],
+    "completed_runs": 0,
+    "analysis_methods": [],
+    "effective_parameter_axes": {
+      "Ps_out": [
+        264547.5,
+        226105.55,
+        207259.55,
+        191105.85,
+        49704.25,
+        33136.15,
+        25000.0
+      ]
+    },
+    "sweep_source": "conditions.boundary_conditions.Ps_out",
+    "solver_mode": "external_api",
+    "solver_base_url": "http://127.0.0.1:8502/",
+    "background_error": true,
+    "external_error": "Failed to submit external job. api/jobs: HTTP 404 Not Found: {\"detail\":\"Not Found\"} | jobs: HTTP 404 Not Found: {\"detail\":\"Not Found\"} | api/run: HTTP 404 Not Found: {\"detail\":\"Not Found\"} | run: HTTP 404 Not Found: {\"detail\":\"Not Found\"}"
+  },
+  "created_at": "2026-05-10T13:46:14.866367Z",
+  "completed_at": "2026-05-10T13:46:15.168422Z"
+}

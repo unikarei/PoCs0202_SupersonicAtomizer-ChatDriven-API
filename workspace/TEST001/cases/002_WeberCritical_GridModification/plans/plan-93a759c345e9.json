@@ -1,0 +1,23 @@
+{
+  "plan_id": "plan-93a759c345e9",
+  "thread_id": "thread-099f87e2a605",
+  "project_id": "TEST001",
+  "case_id": "002_WeberCritical_GridModification",
+  "instruction": "Inlet Droplet dia. 1000 , 500 , 100 μm",
+  "parameter_axes": {
+    "droplet_diameter_um": [
+      1000.0,
+      500.0,
+      100.0
+    ]
+  },
+  "postprocess_policy": {},
+  "assumptions": [
+    "Plan execution requires explicit user approval.",
+    "Server default post-processing runs for every execution.",
+    "Parameter study expands one run per specified axis combination in later phases."
+  ],
+  "approval_state": "approved",
+  "created_at": "2026-05-10T07:57:52.155507Z",
+  "approved_at": "2026-05-10T07:57:54.399579Z"
+}

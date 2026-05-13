@@ -1,0 +1,23 @@
+{
+  "plan_id": "plan-205aaf294d2f",
+  "thread_id": "thread-81819aa2ce9d",
+  "project_id": "TEST001",
+  "case_id": "001_WeberCritical_ForAgents",
+  "instruction": "In drop dia  1000 , 500 , 100 μm",
+  "parameter_axes": {
+    "droplet_diameter_um": [
+      1000.0,
+      500.0,
+      100.0
+    ]
+  },
+  "postprocess_policy": {},
+  "assumptions": [
+    "Plan execution requires explicit user approval.",
+    "Server default post-processing runs for every execution.",
+    "Parameter study expands one run per specified axis combination in later phases."
+  ],
+  "approval_state": "approved",
+  "created_at": "2026-05-10T11:48:21.089660Z",
+  "approved_at": "2026-05-10T11:48:23.538886Z"
+}

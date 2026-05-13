@@ -1,0 +1,101 @@
+{
+  "case_id": "002_WeberCritical_GridModification",
+  "project_id": "TEST001",
+  "source_yaml_path": "upload://002_WeberCritical_GridModification.yaml",
+  "revision": 2,
+  "conditions": {
+    "fluid": {
+      "working_fluid": "steam",
+      "inlet_wetness": 0
+    },
+    "boundary_conditions": {
+      "Pt_in": 300000,
+      "Tt_in": 520,
+      "Ps_out": [
+        264547.5,
+        226105.55,
+        207259.55,
+        191105.85,
+        49704.25,
+        33136.15,
+        25000
+      ]
+    },
+    "droplet_injection": {
+      "droplet_velocity_in": 10,
+      "droplet_diameter_mean_in": 0.00005,
+      "droplet_diameter_max_in": 0.0001,
+      "water_mass_flow_rate_percent": 10000,
+      "water_mass_flow_rate": null,
+      "injection_mode": "droplet_injection",
+      "liquid_jet_diameter": 100,
+      "liquid_mass_flow_rate": 0.00007839844,
+      "liquid_velocity": 10,
+      "liquid_density": 998.2,
+      "liquid_viscosity": 0.001002,
+      "surface_tension": 0.072,
+      "primary_breakup_model": "empirical",
+      "primary_breakup_coefficient": 10,
+      "initial_SMD_model": "fraction_of_jet",
+      "input_basis": "diameter_based",
+      "liquid_material": "water"
+    },
+    "model_selection": {
+      "breakup_model": "weber_critical",
+      "critical_weber_number": 12,
+      "breakup_factor_mean": 0.5,
+      "breakup_factor_max": 0.5,
+      "drag_model": "standard_sphere",
+      "coupling_mode": "one_way"
+    },
+    "models": {
+      "coupling_mode": "one_way",
+      "breakup_model": "weber_critical",
+      "critical_weber_number": 12,
+      "breakup_factor_mean": 0.5,
+      "breakup_factor_max": 0.5,
+      "khrt_B0": 0.61,
+      "khrt_B1": 40,
+      "khrt_Crt": 0.1,
+      "liquid_density": 998.2,
+      "liquid_viscosity": 0.001002,
+      "tab_reduction_fraction": 0.5,
+      "tab_spring_k": 0.001,
+      "tab_damping_c": 1e-6,
+      "tab_breakup_threshold": 1
+    },
+    "outputs": {
+      "output_dir": "outputs",
+      "write_csv": true,
+      "write_json": true,
+      "generate_plots": true,
+      "clean_case": true
+    }
+  },
+  "grid": {
+    "x_start": 0,
+    "x_end": 0.5,
+    "n_cells": 100,
+    "area_distribution": {
+      "type": "table",
+      "x": [
+        0,
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.5
+      ],
+      "A": [
+        0.00018,
+        0.00013,
+        0.0001,
+        0.00012,
+        0.00014,
+        0.00014
+      ]
+    }
+  },
+  "created_at": "2026-05-10T05:31:56.133157Z",
+  "updated_at": "2026-05-10T06:48:45.092625Z"
+}

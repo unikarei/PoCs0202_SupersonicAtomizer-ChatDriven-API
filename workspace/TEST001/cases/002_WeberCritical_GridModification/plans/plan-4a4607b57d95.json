@@ -1,0 +1,17 @@
+{
+  "plan_id": "plan-4a4607b57d95",
+  "thread_id": "thread-d3c74db3337e",
+  "project_id": "TEST001",
+  "case_id": "002_WeberCritical_GridModification",
+  "instruction": "実行して",
+  "parameter_axes": {},
+  "postprocess_policy": {},
+  "assumptions": [
+    "Plan execution requires explicit user approval.",
+    "Server default post-processing runs for every execution.",
+    "No parameter axes specified; execution is treated as a single-run request in this PoC."
+  ],
+  "approval_state": "approved",
+  "created_at": "2026-05-11T12:23:52.079543Z",
+  "approved_at": "2026-05-11T12:23:54.800468Z"
+}

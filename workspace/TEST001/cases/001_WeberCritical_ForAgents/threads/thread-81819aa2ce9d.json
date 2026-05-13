@@ -1,0 +1,19 @@
+{
+  "thread_id": "thread-81819aa2ce9d",
+  "project_id": "TEST001",
+  "case_id": "001_WeberCritical_ForAgents",
+  "messages": [
+    {
+      "role": "user",
+      "content": "In drop dia  1000 , 500 , 100 μm",
+      "created_at": "2026-05-10T11:48:21.071631Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Created plan plan-205aaf294d2f with 3 planned run(s).",
+      "created_at": "2026-05-10T11:48:21.128565Z"
+    }
+  ],
+  "created_at": "2026-05-10T11:48:21.071631Z",
+  "updated_at": "2026-05-10T11:48:21.128565Z"
+}
